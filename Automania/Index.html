@@ -43,31 +43,50 @@
       
       body{
         background-image: url(bg.jpg);
+        background-size: cover;
+        background-position: center;
       }
       
-          /* --- Estilos para la Silueta con Iluminación --- */
-    .container {
-      background: rgba(255, 255, 255, 0.05); 
-      border: 1px solid rgba(179, 179, 179, 0.15);
-      border-radius: 15px;
-      padding: 2.5rem;
-      box-shadow: 
-        0 8px 32px 0 rgba(168, 95, 179, 0.1), 
-        inset 0 0 15px rgba(249, 236, 236, 0.05);
+      /* --- Estilos para la Silueta con Iluminación --- */
+      .container {
+        background: rgba(255, 255, 255, 0.05); 
+        border: 1px solid rgba(179, 179, 179, 0.15);
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 
+          0 8px 32px 0 rgba(168, 95, 179, 0.1), 
+          inset 0 0 15px rgba(249, 236, 236, 0.05);
 
-      max-width: 700px;
-      margin: 2rem auto;
+        max-width: 700px;
+        margin: 2rem auto;
 
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        transition: all 0.3s ease-in-out;
+      }
 
-      transition: all 0.3s ease-in-out;
-    }
+      .container:hover {
+        background: rgba(238, 238, 238, 0.08);
+        border-color: rgba(255, 0, 182, 0.3);
+      }
 
-    .container:hover {
-      background: rgba(238, 238, 238, 0.08);
-      border-color: rgba(255, 0, 182, 0.3);
-    }
+      /* --- ESTILOS REDES SOCIALES --- */
+      .social-link {
+        transition: transform 0.2s, color 0.2s;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .social-link:hover {
+        transform: translateY(-3px); /* Pequeño brinco al pasar el mouse */
+      }
+
+      /* Colores de marca */
+      .fa-facebook:hover  { color: #1877F2 !important; }
+      .fa-instagram:hover { color: #E4405F !important; }
+      .fa-tiktok:hover    { color: #00f2ea !important; text-shadow: 2px 0 #ff0050; } 
+      .fa-x-twitter:hover { color: #ffffff !important; }
+      .fa-pinterest:hover { color: #BD081C !important; }
 
     </style>
   </head>
@@ -93,30 +112,32 @@
 
       <main class="px-3">
         <br>
-        <h1>Automania</h1>
+        <h1 class="display-4 fw-bold">Automania</h1>
         <div class="container">
-        <div class="geo-regular">
-          <p class="lead">
-          Un espacio donde encontrarás noticias, reseñas, consejos prácticos y las últimas tendencias de la industria.
-          Desde la historia de los grandes clásicos hasta la innovación de los autos eléctricos y autónomos, aquí podrás descubrir, 
-          aprender y compartir tu pasión por los motores. Ya seas un experto en mecánica, un coleccionista, o simplemente alguien
-          que quiere iniciar en este fascinante mundo, este lugar está diseñado para ti.
-        </p>
+          <div class="geo-regular">
+            <p class="lead">
+              Un espacio donde encontrarás noticias, reseñas, consejos prácticos y las últimas tendencias de la industria.
+              Desde la historia de los grandes clásicos hasta la innovación de los autos eléctricos y autónomos, aquí podrás descubrir, 
+              aprender y compartir tu pasión por los motores.
+            </p>
+          </div>
         </div>
-      </div>
         <p class="lead">
           <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">
-            <i class="fa-solid fa-circle-info"></i> Leer más
+            Leer más
           </a>
         </p>
       </main>
 
       <footer class="mt-auto text-white-50">
-        <p>
-          Síguenos en nuestras redes: <br><br>
-          <a href="https://facebook.com" class="text-white me-3"><i class="fa-brands fa-facebook fa-xl"></i></a>
-          <a href="https://instagram.com" class="text-white"><i class="fa-brands fa-instagram fa-xl"></i></a>
-        </p>
+        <p>Síguenos en nuestras redes:</p>
+        <div class="pb-3">
+          <a href="https://facebook.com" class="text-white-50 social-link mx-2"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+          <a href="https://instagram.com" class="text-white-50 social-link mx-2"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+          <a href="https://tiktok.com" class="text-white-50 social-link mx-2"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
+          <a href="https://twitter.com" class="text-white-50 social-link mx-2"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+          <a href="https://pinterest.com" class="text-white-50 social-link mx-2"><i class="fa-brands fa-pinterest fa-2xl"></i></a>
+        </div>
       </footer>
     </div>
 
