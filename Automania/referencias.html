@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es" class="h-100" data-bs-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Automanía</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="cover.css" rel="stylesheet" />
+<link rel="icon" type="image/x-icon" href="car.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Monda:wght@400..700&display=swap" rel="stylesheet">
+ 
+    <style>
+      /* Ajuste para que los iconos y el texto no se peguen */
+      .nav-masthead .nav-link i {
+        margin-right: 6px;
+      }
+      /* Espaciado entre links para evitar que se empalmen */
+      .nav-masthead .nav-link {
+        margin-left: 1.5rem;
+        color: rgba(255, 255, 255, .5);
+        border-bottom: .25rem solid transparent;
+      }
+ 
+      .nav-masthead .nav-link:hover,
+      .nav-masthead .nav-link:focus {
+        border-bottom-color: rgba(255, 255, 255, .25);
+      }
+ 
+      .nav-masthead .active {
+        color: #fff;
+        border-bottom-color: #fff;
+      }
+ 
+      .cover-container {
+        max-width: 42em;
+      }
+      body{
+        background-image: url(bg.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      /* --- Estilos para la Silueta con Iluminación --- */
+      .container {
+        background: rgba(255, 255, 255, 0.05); 
+        border: 1px solid rgba(179, 179, 179, 0.15);
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: 
+          0 8px 32px 0 rgba(168, 95, 179, 0.1), 
+          inset 0 0 15px rgba(249, 236, 236, 0.05);
+ 
+        max-width: 700px;
+        margin: 2rem auto;
+ 
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        transition: all 0.3s ease-in-out;
+      }
+ 
+      .container:hover {
+        background: rgba(238, 238, 238, 0.08);
+        border-color: rgba(255, 0, 182, 0.3);
+      }
+ 
+      /* --- ESTILOS REDES SOCIALES --- */
+      .social-link {
+        transition: transform 0.2s, color 0.2s;
+        display: inline-block;
+        text-decoration: none;
+      }
+ 
+      .social-link:hover {
+        transform: translateY(-3px); /* Pequeño brinco al pasar el mouse */
+      }
+ 
+      /* Colores de marca */
+      .fa-facebook:hover  { color: #1877F2 !important; }
+      .fa-instagram:hover { color: #E4405F !important; }
+      .fa-tiktok:hover    { color: #00f2ea !important; text-shadow: 2px 0 #ff0050; } 
+      .fa-x-twitter:hover { color: #ffffff !important; }
+      .fa-pinterest:hover { color: #BD081C !important; }
+      a{
+        text-decoration: none;
+      }
+</style>
+</head>
+<body class="d-flex h-100 text-center text-bg-dark">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<header class="mb-auto">
+<div>
+<a href="Index.html" style="text-decoration: none; color:white;"><h3 class="float-md-start mb-0"><i class="fa-solid fa-gauge-high"></i> Automania</h3></a>
+ 
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+<a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">
+<i class="fa-solid fa-car"></i> Contenido
+</a>
+<a class="nav-link fw-bold py-1 px-0" href="referencias.html">
+<i class="fa-solid fa-book-open"></i> Referencias
+</a>
+<a class="nav-link fw-bold py-1 px-0" href="contacto.html">
+<i class="fa-solid fa-envelope"></i> Contacto
+</a>
+</nav>
+</div>
+</header>
+<br>
+<main class="px-3">
+  <div class="dm-sans-300">
+    <div class="accordion" id="accordionExample">
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <i class="fa-brands fa-bootstrap"></i> &nbsp; Bootstrap
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: justify;">
+            <strong>Bootstrap</strong> es un framework de código abierto muy popular para el desarrollo web. Proporciona una amplia colección de componentes y utilidades que facilitan la creación de interfaces modernas, responsivas y adaptables a distintos dispositivos, reduciendo el tiempo de diseño y programación. <br> <a href="https://getbootstrap.com"><code>https://getbootstrap.com</code></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <i class="fa-brands fa-google"></i> &nbsp; Google Fonts
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: justify;">
+            <strong>Google Fonts</strong> ofrece una gran biblioteca de tipografías gratuitas y fáciles de integrar en proyectos web. Permite mejorar la estética y legibilidad de los sitios, brindando variedad y personalización en el estilo de texto sin necesidad de instalar fuentes localmente. <a href="https://fonts.google.com"><code>https://fonts.google.com</code></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <i class="fa-solid fa-font-awesome"></i> &nbsp; Font Awesome
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: justify;">
+            <strong>Font Awesome</strong> es una herramienta que proporciona íconos vectoriales y logotipos listos para usar en aplicaciones y páginas web. Su integración es sencilla y permite enriquecer la experiencia visual del usuario con íconos escalables y personalizables. <a href="https://fontawesome.com"><code>https://fontawesome.com</code></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <i class="fa-brands fa-github"></i> &nbsp; Github
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: justify;">
+            <strong>Github</strong> es una plataforma de desarrollo colaborativo basada en Git. Facilita la gestión de proyectos, el control de versiones y el trabajo en equipo, permitiendo almacenar, compartir y colaborar en repositorios de código de manera eficiente. <a href="https://github.com"><code>https://github.com</code></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <i class="fa-brands fa-html5"></i> &nbsp; Phoenix Code
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: justify;">
+            <strong>Phoenix Code</strong> ofrece plantillas y recursos premium para desarrolladores web. Sus productos están diseñados para acelerar la creación de interfaces profesionales y modernas, con componentes listos para usar y adaptables a diferentes necesidades. <a href="https://phoenixcoded.net"><code>https://phoenixcoded.net</code></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            <i class="fa-solid fa-code"></i> &nbsp; Visual Studio Code
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: justify;">
+            <strong>Visual Studio Code</strong> es un editor de código fuente desarrollado por Microsoft. Es ligero, potente y extensible, con soporte para múltiples lenguajes de programación, depuración integrada y una gran variedad de extensiones que optimizan el flujo de trabajo del desarrollador. <br><a href="https://code.visualstudio.com"><code>https://code.visualstudio.com</code></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            <i class="fa-solid fa-car"></i> &nbsp; NetCarShow
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: justify;">
+            <strong>NetCarShow</strong> es una base de datos visual exhaustiva que proporciona imágenes de alta resolución e información técnica de miles de modelos. Es una fuente invaluable para obtener datos sobre la evolución de las marcas y lanzamientos recientes para el contenido de Automanía. <br> <a href="https://www.netcarshow.com"><code>https://www.netcarshow.com</code></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            <i class="fa-solid fa-newspaper"></i> &nbsp; MotorTrend
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: justify;">
+            <strong>MotorTrend</strong> es un referente mundial en periodismo automotriz. Ofrece reseñas profundas y las últimas tendencias en movilidad eléctrica y tecnología. Ideal para redactar artículos actualizados sobre la modernidad y el futuro de la industria. <br> <a href="https://www.motortrend.com"><code>https://www.motortrend.com</code></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            <i class="fa-solid fa-image"></i> &nbsp; Pexels Cars
+          </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: justify;">
+            <strong>Pexels</strong> ofrece una amplia colección de fotografías y videos de alta calidad bajo licencias gratuitas. Su sección automotriz permite obtener material visual profesional para el diseño de banners y fondos sin conflictos de derechos de autor. <br> <a href="https://www.pexels.com/search/cars/"><code>https://www.pexels.com</code></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+            <i class="fa-solid fa-graduation-cap"></i> &nbsp; W3Schools
+          </button>
+        </h2>
+        <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: justify;">
+            <strong>W3Schools</strong> es la plataforma de referencia para consultas rápidas sobre HTML, CSS y JavaScript. Fue fundamental para implementar correctamente las clases de Bootstrap y las etiquetas estructurales de este proyecto. <br> <a href="https://www.w3schools.com"><code>https://www.w3schools.com</code></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+ 
+      <footer class="mt-auto text-white-50">
+<div class="dm-sans-300">
+<br>
+<p>Síguenos en nuestras redes:</p>
+</div>
+<div class="pb-3">
+<a href="https://facebook.com" class="text-white-50 social-link mx-2"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+<a href="https://instagram.com" class="text-white-50 social-link mx-2"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+<a href="https://tiktok.com" class="text-white-50 social-link mx-2"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
+<a href="https://twitter.com" class="text-white-50 social-link mx-2"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+<a href="https://pinterest.com" class="text-white-50 social-link mx-2"><i class="fa-brands fa-pinterest fa-2xl"></i></a>
+</div>
+</footer>
+</div>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
