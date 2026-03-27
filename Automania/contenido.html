@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+<meta name="generator" content="Astro v5.13.2" />
+<link rel="icon" type="image/x-icon" href="car.png">
+<title>Automanía: El mundo del automóvil</title>
+<link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+<script src="assets/js/color-modes.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+<meta name="theme-color" content="#712cf9" />
+<link href="carousel.css" rel="stylesheet" />
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: #0000001a;
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow:
+          inset 0 0.5em 1.5em #0000001a,
+          inset 0 0.125em 0.5em #00000026;
+      }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .btn-bd-primary {
+        --bd-violet-bg: #bd001f;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #bd001f;
+        --bs-btn-hover-border-color: #bd001f;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #bd001f;
+        --bs-btn-active-border-color: #bd001f;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .bd-mode-toggle .bi {
+        width: 1em;
+        height: 1em;
+      }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+<symbol id="check2" viewBox="0 0 16 16">
+<path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+></path>
+</symbol>
+<symbol id="circle-half" viewBox="0 0 16 16">
+<path
+          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+></path>
+</symbol>
+<symbol id="moon-stars-fill" viewBox="0 0 16 16">
+<path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+></path>
+<path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+></path>
+</symbol>
+<symbol id="sun-fill" viewBox="0 0 16 16">
+<path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+></path>
+</symbol>
+</svg>
+<div
+      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+>
+<button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)"
+>
+<svg class="bi my-1 theme-icon-active" aria-hidden="true">
+<use href="#circle-half"></use>
+</svg>
+<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+</button>
+<ul
+        class="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+>
+<li>
+<button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false"
+>
+<svg class="bi me-2 opacity-50" aria-hidden="true">
+<use href="#sun-fill"></use>
+</svg>
+            Modo Claro&nbsp;
+<svg class="bi ms-auto d-none" aria-hidden="true">
+<use href="#check2"></use>
+</svg>
+</button>
+</li>
+<li>
+<button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+>
+<svg class="bi me-2 opacity-50" aria-hidden="true">
+<use href="#moon-stars-fill"></use>
+</svg>
+            Modo Oscuro&nbsp;
+<svg class="bi ms-auto d-none" aria-hidden="true">
+<use href="#check2"></use>
+</svg>
+</button>
+</li>
+<li>
+<button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+>
+<svg class="bi me-2 opacity-50" aria-hidden="true">
+<use href="#circle-half"></use>
+</svg>
+<svg class="bi ms-auto d-none" aria-hidden="true">
+<use href="#check2"></use>
+</svg>
+</button>
+</li>
+</ul>
+</div>
+<header data-bs-theme="dark">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">Automanía</a>
+<button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+>
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="#"> </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="#"> </a></li>
+<li class="nav-item">
+<a class="nav-link disabled" aria-disabled="true"></a>
+</li>
+</ul>
+<form class="d-flex" role="search">
+<input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+<button class="btn btn-outline-success" type="submit">
+                Search
+</button>
+</form>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+<div class="carousel-indicators">
+<button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+></button>
+<button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+></button>
+<button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active div-background">
+<img src="images/c1.jpg" class="d-block w-100" alt="Auto 1" style="object-fit: cover; height: 600px;">
+<div class="container">
+<div class="carousel-caption text-start div-text">
+<h1>Bienvenidos a Automanía</h1>
+<p class="opacity-75">
+    Explora el mundo del automóvil con nosotros
+</p>
+</div>
+</div>
+</div>
+<div class="carousel-item div-background">
+<img src="images/c2.jpg" class="d-block w-100" alt="Auto 2" style="object-fit: cover; height: 600px;">
+<div class="container">
+<div class="carousel-caption div-text">
+<h1>Potencia y Tecnología</h1>
+<p>
+    Explora nuestras reseñas a fondo sobre los últimos lanzamientos y las innovaciones que están cambiando el asfalto
+</p>
+</div>
+</div>
+</div>
+<div class="carousel-item div-background">
+<img src="images/c3.jpg" class="d-block w-100" alt="Auto 3" style="object-fit: cover; height: 600px;">
+<div class="container">
+<div class="carousel-caption text-end div-text">
+<h1>El Brillo que Mereces</h1>
+<p>
+    Desde el mantenimiento básico hasta el detallado profesional. Aprende cómo mantener tu vehículo como recién salido de agencia.
+</p>
+<p>
+</p>
+</div>
+</div>
+</div>
+</div>
+<button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev"
+>
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next"
+>
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+<!-- Marketing messaging and featurettes
+  ================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="container marketing">
+<!-- Three columns of text below the carousel -->
+<div class="row">
+<div class="col-lg-4">
+<img src="images/interior.avif" class="rounded-circle" width="140" height="140" style="object-fit: cover; border: 3px solid #bd001f;">
+<h2 class="fw-normal">Pruebas de Manejo</h2>
+<p>
+    Subimos a bordo de los últimos modelos para contarte todo sobre su potencia, confort y tecnología en el asfalto.
+</p>
+<p>
+<a class="btn btn-secondary" href="#">View details</a>
+</p>
+</div>
+<!-- /.col-lg-4 -->
+<div class="col-lg-4">
+<img src="images/detailing.avif" class="rounded-circle" width="140" height="140" style="object-fit: cover; border: 3px solid #bd001f;">
+<h2 class="fw-normal">Cuidado y Detailing</h2>
+<p>
+   Consejos expertos para mantener la estética de tu auto impecable, desde el lavado básico hasta el pulido profesional.
+</p>
+<p>
+<a class="btn btn-secondary" href="#">View details</a>
+</p>
+</div>
+<!-- /.col-lg-4 -->
+<div class="col-lg-4">
+<img src="images/newcar.avif" class="rounded-circle" width="140" height="140" style="object-fit: cover; border: 3px solid #bd001f;">
+<h2 class="fw-normal">Mundo Motor</h2>
+<p>
+    Mantente al día con las noticias más relevantes de la industria, lanzamientos globales y eventos de automovilismo.
+</p>
+<p>
+<a class="btn btn-secondary" href="#">View details</a>
+   
+</p>
+</div>
+<!-- /.col-lg-4 -->
+</div>
+<!-- /.row -->
+<!-- START THE FEATURETTES -->
+<hr class="featurette-divider" />
+<div class="row featurette align-items-center"> <div class="col-md-7">
+    <h2 class="featurette-heading fw-normal lh-1">
+      <i class="fa-solid fa-car"></i> &nbsp;Página Principal
+      <span class="text-body-secondary">[Automanía.com]</span>
+    </h2>
+    <p class="lead">
+      Explora nuestra plataforma principal de Automanía, donde encontrarás 
+      las últimas tendencias, reseñas exclusivas y todo lo que un verdadero 
+      entusiasta del motor necesita saber.
+    </p>
+  </div>
+  <div class="col-md-5">
+    <div class="ratio ratio-1x1 shadow-lg" style="border-radius: 20px; overflow: hidden; border: 2px solid #bd001f;">
+      <iframe 
+        src="https://canizales-web.github.io/automania/principal.html" 
+        title="Automanía: El mundo del automóvil"
+        style="border:none;"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</div>
+    
+<hr class="featurette-divider" />
+<div class="row featurette align-items-center mb-5">
+  <div class="col-md-5 d-flex justify-content-center order-md-1 mb-4 mb-md-0">
+    <div class="p-2 shadow-lg" style="border-radius: 15px; border: 3px solid #bd001f; background-color: #1a1a1a; display: inline-block;">
+      <div class="pinterest-container">
+        <a data-pin-do="embedPin" data-pin-width="large" href="https://www.pinterest.com/pin/1139199668275557450/"></a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-7 order-md-2 text-md-start text-center">
+    <h2 class="featurette-heading fw-normal lh-1">
+      <i class="fab fa-pinterest"></i> &nbsp;Inspiración Visual
+      <span class="text-body-secondary">[Pinterest]</span>
+    </h2>
+    <p class="lead">
+      El tablero de un automóvil es la interfaz clave entre el conductor y la máquina.
+      Mira esta referencia de diseño de Ford Raptor que hemos seleccionado para ti en nuestro festín visual.
+    </p>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette align-items-center mb-5">
+  <div class="col-md-7 text-md-start text-center">
+    <h2 class="featurette-heading fw-normal lh-1">
+      <i class="fab fa-tiktok text-light"></i> &nbsp;Tendencias en Movimiento
+      <span class="text-body-secondary">[TikTok]</span>
+    </h2>
+    <p class="lead">
+      Desde los despegues más brutales hasta el rugido de los motores que nos quitan el sueño. 
+      Sigue nuestra cuenta oficial para vivir la adrenalina en formato vertical. 🏎️💨
+    </p>
+  </div>
+  
+  <div class="col-md-5 d-flex justify-content-center">
+    <div class="p-1 shadow-lg" style="border-radius: 20px; border: 3px solid #bd001f; background-color: #000; overflow: hidden; max-width: 340px;">
+      
+      <blockquote class="tiktok-embed" 
+                  cite="https://www.tiktok.com/@automania.2026_/video/7621779893273038096" 
+                  data-video-id="7621779893273038096" 
+                  style="max-width: 325px; min-width: 325px; margin: 0 auto;"> 
+        <section> 
+          <a target="_blank" title="@automania.2026_" href="https://www.tiktok.com/@automania.2026_?refer=embed">@automania.2026_</a> 
+          <p>No importa la marca, importa la sensación. 🏎️✨ #Automanía #CarTok #SportCar</p> 
+          <a target="_blank" title="♬ sonido original - automania.2026_" href="https://www.tiktok.com/music/sonido-original-automania2026-7621779949493488401?refer=embed">♬ sonido original - automania.2026_</a> 
+        </section> 
+      </blockquote> 
+      <script async src="https://www.tiktok.com/embed.js"></script>
+      </div>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<hr class="featurette-divider">
+
+<div class="row featurette align-items-center mb-5">
+  <div class="col-md-5 d-flex justify-content-center order-md-1 mb-4 mb-md-0">
+    <div class="p-2 shadow-lg" style="border-radius: 15px; border: 3px solid #bd001f; background-color: #1a1a1a; display: inline-block; width: 100%; max-width: 400px;">
+      
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWX7mXjDNWp/" data-instgrm-version="14" style=" background:#1a1a1a; border:0; margin: 1px; width:calc(100% - 2px);">
+        <div style="padding:16px;">
+          <a href="https://www.instagram.com/p/DWX7mXjDNWp/" style=" background:#1a1a1a; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+            <div style=" display: flex; flex-direction: row; align-items: center;">
+              <div style="background-color: #333; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
+              <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                <div style=" background-color: #333; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+                <div style=" background-color: #333; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+              </div>
+            </div>
+            <div style="padding: 19% 0;"></div>
+            <div style="color: #bd001f; font-family:Arial,sans-serif; font-size:14px; font-weight:550;">Ver esta publicación en Instagram</div>
+          </a>
+        </div>
+      </blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+      </div>
+  </div>
+
+  <div class="col-md-7 order-md-2 text-md-start text-center">
+    <h2 class="featurette-heading fw-normal lh-1">
+      <i class="fab fa-instagram"></i> &nbsp;Galería
+      <span class="text-body-secondary">[Instagram]</span>
+    </h2>
+    <p class="lead">
+      Tomas fotográficas de alta calidad, detalles de interiores exquisitos y 
+      cobertura exclusiva de eventos. Nuestra galería de Instagram es el deleite visual de Automanía.
+    </p>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette align-items-center mb-5">
+  <div class="col-md-7 text-md-start text-center">
+    <h2 class="featurette-heading fw-normal lh-1">
+      <i class="fab fa-x-twitter text-light"></i> &nbsp;Noticias al Instante
+      <span class="text-body-secondary">[X.com]</span>
+    </h2>
+    <p class="lead">
+      Lanzamientos mundiales, flltraciones de la industria y debates en tiempo real. 
+      Nuestra visión experta sobre iconos como el Porsche 911 GT3 RS.
+    </p>
+  </div>
+  <div class="col-md-5 d-flex justify-content-center">
+    <div class="p-4 shadow-lg" style="border-radius: 15px; border: 3px solid #bd001f; background-color: #1a1a1a; width: 100%; max-width: 500px; overflow: hidden;">
+      
+      <blockquote class="twitter-tweet" data-theme="dark" data-width="100%" data-lang="es" dir="ltr">
+        <p lang="es" dir="ltr">¿Existe algo más perfecto que el sonido de un bóxer de 6 cilindros? 🏁<br><br>Hoy en Automanía nos ponemos al volante de un mito. La perfección alemana en su máxima expresión.<a href="https://twitter.com/hashtag/Porsche911?src=hash&amp;ref_src=twsrc%5Etfw">#Porsche911</a> <a href="https://twitter.com/hashtag/GT3RS?src=hash&amp;ref_src=twsrc%5Etfw">#GT3RS</a> <a href="https://twitter.com/hashtag/SportCars?src=hash&amp;ref_src=twsrc%5Etfw">#SportCars</a> <a href="https://twitter.com/hashtag/Automan%C3%ADa?src=hash&amp;ref_src=twsrc%5Etfw">#Automanía</a> <a href="https://t.co/8cD6OrTczL">pic.twitter.com/8cD6OrTczL</a></p>&mdash; Auto Manía (@Automania2026) 
+        <a href="https://twitter.com/Automania2026/status/2037375202493919668?ref_src=twsrc%5Etfw">March 27, 2026</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+  </div>
+</div>
+
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+<hr class="featurette-divider" />
+<!-- /END THE FEATURETTES -->
+<!-- /.container -->
+<!-- FOOTER -->
+<footer class="container">
+<p class="float-end"><a href="#">Back to top</a></p>
+<p>
+&copy; 2017–2025 Company, Inc. &middot;
+<a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+</p>
+</footer>
+</main>
+<script
+      src="assets/dist/js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+></script>
+    
+</body>
+</html>
