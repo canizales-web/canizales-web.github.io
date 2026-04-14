@@ -1,0 +1,81 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu{
+    width: 35%;
+    height: 75%;
+    font-size: 75%;
+    border: solid 1px black;
+    background-color: lightcyan;
+    transition: height 0.5s, 
+                font 0.5s, 
+                background-color 2.5s,
+                width 1.0s;
+}
+
+.menu:hover {
+    width: 75%;
+    height: 125%;
+    font-size: 125%;
+    background-color: #0c7b87;
+}
+
+.rainbow, .arcoiris{
+    height: 150px;
+    width: 150px;
+    border: solid 2px black;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    color: white;
+}
+
+@keyframes rgb{
+    0%{ background-color: green;}
+    16%{background-color: yellow;}
+    33%{ background-color: orange;}
+    50%{background-color: red;}
+    67%{background-color: purple;}
+    82%{background-color: blue;}
+    100%{background-color: green;}
+}
+
+.rainbow{
+    animation-name: rgb;
+    animation-direction: normal;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2.5s;
+}
+
+.arcoiris{
+    animation-name: rgb;
+    animation-direction: normal;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2.5s;
+}
+.rgb{
+    font-weight: bold;
+    font-size: 200%;
+    animation-name: rgb1;
+    animation-direction: normal;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2.5s;
+}
+
+@keyframes rgb1{
+    0%{color: green;}
+    16%{color: yellow;}
+    33%{color: orange;}
+    50%{color: red;}
+    67%{color: purple;}
+    82%{color: blue;}
+    100%{color: green;}
+}

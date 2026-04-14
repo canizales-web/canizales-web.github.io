@@ -1,0 +1,39 @@
+tr:nth-child(even){
+    background-color: lightgray;
+}
+
+tr:hover{
+    background-color: lightyellow;
+}
+
+table{
+    border: solid 1px #C5C5C5;
+    border-collapse: collapse;
+    width: 100%;
+    cursor: pointer;
+}
+
+td,th{
+    text-align: center;
+    padding: 10px;
+    
+}
+
+th{
+   background-color: white;
+   text-transform: uppercase;
+}
+
+.quicksand-300, table, h2 {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.quicksand-500,  summary{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
