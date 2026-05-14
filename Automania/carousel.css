@@ -159,7 +159,6 @@ body {
 }
 
 
-.navbar .navbar-brand, 
 .navbar .nav-link {
     font-weight: 400 !important; 
     text-transform: uppercase;
@@ -171,7 +170,16 @@ body {
 
 .navbar .navbar-brand {
     color: #bd001f !important;
+    font-weight: 800 !important; 
+    font-size: 1.4rem; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     border-bottom: none !important; 
+    transition: transform 0.3s ease;
+}
+
+.navbar .navbar-brand:hover {
+    transform: scale(1.05);
 }
 
 .navbar .nav-link.active {
