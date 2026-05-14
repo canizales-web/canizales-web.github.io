@@ -23,27 +23,47 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark border-bottom border-danger">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="contenido.html">Automanía</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="historia.html">Historia del automóvil</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="tipos.html">Tipos de automóviles</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Marcas</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Historia</a></li>
-                                <li><a class="dropdown-item" href="#">Ranking global</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+       <header data-bs-theme="dark">   
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand custom-brand" href="Index.html">Automanía</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contenido.html">
+              <i class="fa-solid fa-car"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="historia.html">Historia del automóvil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tipos.html">Tipos de automóviles</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Marcas
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Historia</a></li>
+              <li><a class="dropdown-item" href="#">Mejores/Peores creaciones</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Ranking global de marcas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">El futuro de la industria</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
         <div class="container mt-5">
             <div class="row">
