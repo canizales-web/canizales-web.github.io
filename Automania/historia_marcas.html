@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Historia de las Marcas - Automanía</title>
+        <title>Crónicas de la Industria - Automanía</title>
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
@@ -13,19 +13,21 @@
             .text-red { color: #bd001f; }
             .card { background-color: #1a1a1a; border-color: #333; color: #fff; }
             .card-header { background-color: #252525; border-bottom: 2px solid #bd001f; }
-            .badge-automania { background-color: #bd001f; color: white; padding: 0.5em 1em; }
+            .badge-automania { background-color: #bd001f; color: white; }
             
+            /* Imágenes horizontales uniformes */
             .article-img { 
                 border: 1px solid #444; 
                 transition: transform 0.3s; 
                 width: 100%; 
-                height: 350px; 
+                height: 400px; 
                 object-fit: cover; 
                 border-radius: 8px;
             }
             .article-img:hover { transform: scale(1.01); border-color: #bd001f; }
-            .img-caption { font-size: 0.9rem; color: #888; text-align: center; margin-top: 8px; }
+            .img-caption { font-size: 0.9rem; color: #888; text-align: center; margin-top: 8px; margin-bottom: 25px; }
 
+            /* Navbar (Tu formato original sin cambios) */
             .navbar .nav-link {
                 font-weight: 400 !important; 
                 text-transform: uppercase;
@@ -59,28 +61,37 @@
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="Index.html">Automanía</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="contenido.html"><i class="fa-solid fa-car"></i></a>
+                                <a class="nav-link" href="contenido.html">
+                                    <i class="fa-solid fa-car"></i>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="historia.html">Historia del automóvil</a>
+                                <a class="nav-link active" aria-current="page" href="historia.html">Historia del automóvil</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="tipos.html">Tipos de automóviles</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Marcas</a>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Marcas
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="https://es.wikipedia.org/wiki/Historia_del_autom%C3%B3vil" target="_blank">Historia General</a></li>
                                     <li><a class="dropdown-item" href="https://www.topgear.com/car-news/best-and-worst-cars" target="_blank">Mejores/Peores creaciones</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="https://www.interbrand.com/best-global-brands/" target="_blank">Ranking global de marcas</a></li>
                                 </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">El futuro de la industria</a>
                             </li>
                         </ul>
                     </div>
@@ -92,45 +103,71 @@
             <div class="row">
                 <div class="col-lg-8">
                     <article>
-                        <header class="mb-4">
-                            <h1 class="fw-bolder mb-1 text-red">Linaje de Hierro: La Historia Detrás de los Emblemas</h1>
-                            <div class="text-muted fst-italic mb-2">Un recorrido por las marcas que definieron naciones</div>
+                        <header class="mb-5">
+                            <h1 class="fw-bolder mb-1 text-red" style="font-size: 2.5rem;">Linajes del Asfalto: La Genealogía de las Marcas</h1>
+                            <p class="lead">Exploramos el origen, las crisis y el ascenso de los fabricantes que movilizaron al mundo.</p>
                         </header>
 
                         <section class="mb-5">
-                            <h2 class="fw-bold text-red">Alemania: La Cuna de la Ingeniería Precisa</h2>
-                            <p class="fs-5">Hablar de marcas alemanas es hablar de la invención misma del auto. <strong>Mercedes-Benz</strong> no solo creó el primer vehículo propulsado por gasolina, sino que estableció el estándar de lujo global. Por otro lado, <strong>BMW</strong> pasó de fabricar motores de avión a definir el sedán deportivo moderno, mientras que <strong>Volkswagen</strong> cumplió la promesa del "auto del pueblo" con el icónico Beetle, convirtiéndose hoy en uno de los grupos automotrices más grandes del planeta.</p>
-                            <img class="img-fluid rounded article-img" src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1000" alt="Mercedes Benz Clásico" />
-                            <figcaption class="img-caption">Mercedes-Benz: Más de un siglo dictando las reglas del lujo automotriz.</figcaption>
+                            <h2 class="fw-bold text-red border-bottom border-danger pb-2">ALEMANIA: La Perfección como Estándar</h2>
+                            
+                            <h4 class="mt-4">Mercedes-Benz</h4>
+                            <p>Todo comenzó con el Patent-Motorwagen de Karl Benz en 1886. Tras la fusión con la empresa de Gottlieb Daimler, la marca de la estrella se convirtió en sinónimo de opulencia e innovación. Fueron pioneros en sistemas de seguridad que hoy damos por sentados, como el ABS y el airbag.</p>
+                            
+                            <h4 class="mt-4">BMW (Bayerische Motoren Werke)</h4>
+                            <p>Originalmente fabricante de motores de aviación (de ahí su logo que evoca una hélice), BMW casi desaparece tras la Segunda Guerra Mundial. Se reinventaron en los años 60 con la "Nueva Clase", definiendo el concepto de sedán deportivo que equilibra el lujo con una conducción purista.</p>
+                            
+                            <h4 class="mt-4">Porsche</h4>
+                            <p>Ferdinand Porsche diseñó el Volkswagen Beetle, pero fue su hijo, "Ferry", quien decidió crear un auto deportivo con ese ADN. Así nació el 356, seguido por el legendario 911, un auto que ha mantenido su configuración de motor trasero por más de 60 años, desafiando las leyes de la física.</p>
+                            
+                            <img class="article-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200" alt="Ingeniería Alemana" />
+                            <figcaption class="img-caption">El 911: El estandarte de la ingeniería alemana que se niega a envejecer.</figcaption>
                         </section>
 
                         <section class="mb-5">
-                            <h2 class="fw-bold text-red">Japón: La Revolución de la Confiabilidad</h2>
-                            <p class="fs-5">Después de la guerra, marcas como <strong>Toyota</strong> y <strong>Honda</strong> transformaron la industria con el sistema de producción "Just in Time". Toyota se enfocó en la durabilidad extrema, llevando al Corolla a ser el auto más vendido de la historia. Honda, nacida del ingenio de Soichiro Honda, demostró que la eficiencia de combustible y el alto rendimiento podían ir de la mano, obligando a los gigantes americanos a replantear sus estrategias de calidad.</p>
-                            <img class="img-fluid rounded article-img" src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1000" alt="Nissan Skyline JDM" />
-                            <figcaption class="img-caption">El ascenso del JDM: Confiabilidad japonesa que conquistó los mercados occidentales.</figcaption>
+                            <h2 class="fw-bold text-red border-bottom border-danger pb-2">JAPÓN: La Conquista de la Eficiencia</h2>
+                            
+                            <h4 class="mt-4">Toyota</h4>
+                            <p>Kiichiro Toyoda transformó la fábrica de telares de su padre en un imperio automotriz. Su filosofía de "mejora continua" (Kaizen) les permitió superar a los americanos en calidad. El Corolla es su máxima obra, siendo el vehículo más vendido en la historia de la humanidad.</p>
+                            
+                            <h4 class="mt-4">Honda</h4>
+                            <p>Soichiro Honda era un apasionado de las carreras que empezó acoplando motores de radio a bicicletas. Honda se distingue por su ingeniería de motores; son los mayores fabricantes de motores de combustión del mundo, conocidos por su fiabilidad inquebrantable y su tecnología VTEC.</p>
+                            
+                            <h4 class="mt-4">Nissan</h4>
+                            <p>Conocida originalmente como Datsun, Nissan trajo al mundo el concepto del deportivo accesible con la serie Z y la potencia bruta tecnológica con el GT-R, apodado "Godzilla" por su capacidad de humillar a superdeportivos europeos que triplican su precio.</p>
+
+                            <img class="article-img" src="https://images.unsplash.com/photo-1555679427-1f6dfcce943b?q=80&w=1200" alt="Cultura Japonesa JDM" />
+                            <figcaption class="img-caption">Dominio JDM: Cuando Japón demostró que el alto rendimiento podía ser confiable.</figcaption>
                         </section>
 
                         <section class="mb-5">
-                            <h2 class="fw-bold text-red">Estados Unidos: Potencia y Producción Masiva</h2>
-                            <p class="fs-5">La historia americana se resume en libertad y fuerza. <strong>Ford</strong> democratizó el transporte con el Modelo T, pero fue en los años 60 cuando marcas como <strong>Chevrolet</strong> y <strong>Dodge</strong> crearon los "Muscle Cars", máquinas de gran cilindrada diseñadas para el cuarto de milla. Hoy, la industria americana lidera el cambio hacia la electricidad con nuevas potencias, manteniendo el espíritu de innovación que inició Henry Ford en Detroit.</p>
-                            <img class="img-fluid rounded article-img" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1000" alt="Chevrolet Corvette" />
-                            <figcaption class="img-caption">Muscle Cars: El rugido del motor V8 como símbolo de la cultura americana.</figcaption>
+                            <h2 class="fw-bold text-red border-bottom border-danger pb-2">ESTADOS UNIDOS: El Sueño del V8</h2>
+                            
+                            <h4 class="mt-4">Ford</h4>
+                            <p>Henry Ford no inventó el auto, pero inventó la clase media al hacer que sus trabajadores pudieran pagar lo que fabricaban. El Mustang en 1964 creó el segmento de los "Pony Cars", capturando el espíritu de libertad de la juventud americana.</p>
+                            
+                            <h4 class="mt-4">Chevrolet</h4>
+                            <p>La joya de la corona de General Motors. Desde el Corvette, el "deportivo de América", hasta la Silverado, Chevrolet ha sido el pilar de la fuerza laboral y el alto desempeño en las pistas de NASCAR.</p>
+                            
+                            <h4 class="mt-4">Dodge</h4>
+                            <p>Si Ford es libertad, Dodge es rebeldía. Se han especializado en mantener vivo el espíritu del Muscle Car con motores "Hellcat" de potencias absurdas, recordando que en Estados Unidos, el exceso de potencia siempre es bienvenido.</p>
+
+                            <img class="article-img" src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?q=80&w=1200" alt="Muscle Cars Americanos" />
+                            <figcaption class="img-caption">Pura potencia americana: El rugido de un V8 cruzando el desierto.</figcaption>
                         </section>
                     </article>
                 </div>
 
                 <div class="col-lg-4">
                     <div class="card mb-4 shadow">
-                        <div class="card-header fw-bold">Fundaciones Icónicas</div>
+                        <div class="card-header fw-bold">Grandes Fundadores</div>
                         <div class="card-body">
                             <ul class="list-unstyled mb-0">
-                                <li><strong class="text-red">1886:</strong> Mercedes-Benz (Alemania)</li>
-                                <li><strong class="text-red">1903:</strong> Ford Motor Co. (EE.UU.)</li>
-                                <li><strong class="text-red">1911:</strong> Chevrolet (EE.UU.)</li>
-                                <li><strong class="text-red">1916:</strong> BMW (Alemania)</li>
-                                <li><strong class="text-red">1937:</strong> Toyota (Japón)</li>
-                                <li><strong class="text-red">1948:</strong> Honda (Japón)</li>
+                                <li><strong class="text-red">Karl Benz:</strong> El inventor (1886)</li>
+                                <li><strong class="text-red">Henry Ford:</strong> El visionario (1903)</li>
+                                <li><strong class="text-red">Kiichiro Toyoda:</strong> El estratega (1937)</li>
+                                <li><strong class="text-red">Soichiro Honda:</strong> El mecánico (1948)</li>
+                                <li><strong class="text-red">Enzo Ferrari:</strong> La pasión (1947)</li>
                             </ul>
                         </div>
                     </div>
