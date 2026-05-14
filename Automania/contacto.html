@@ -41,30 +41,41 @@
         background-size: cover;
         background-position: center;
       }
-      /* --- Estilos para la Silueta con Iluminación --- */
-      .container {
-        background: rgba(255, 255, 255, 0.05); 
-        border: 1px solid rgba(179, 179, 179, 0.15);
-        border-radius: 15px;
-        padding: 2.5rem;
-        box-shadow: 
-          0 8px 32px 0 rgba(168, 95, 179, 0.1), 
-          inset 0 0 15px rgba(249, 236, 236, 0.05);
- 
-        max-width: 700px;
-        margin: 2rem auto;
- 
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        transition: all 0.3s ease-in-out;
+     
+      .card {
+       background: rgba(0, 0, 0, 0.5) !important;
+       border: 1px solid rgba(189, 0, 31, 0.3) !important;
+       backdrop-filter: blur(10px);
+       color: white !important;
+       border-radius: 15px !important;
+       overflow: hidden;
+       transition: all 0.3s ease;
+       margin: 0 auto; 
+     }
+
+      .card:hover {
+      border-color: #bd001f !important;
+      box-shadow: 0 0 25px rgba(189, 0, 31, 0.5) !important;
+      transform: scale(1.02);
       }
+    
+    .card-title {
+      color: #bd001f;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+     }
+
+    .img-fluid {
+    object-fit: cover;
+    height: 100% !important;
+    border-right: 1px solid rgba(189, 0, 31, 0.3);
+    }
+
+    b {
+      color: #bd001f;
+    }
  
-      .container:hover {
-        background: rgba(238, 238, 238, 0.08);
-        border-color: rgba(255, 0, 182, 0.3);
-      }
- 
-      /* --- ESTILOS REDES SOCIALES --- */
       .social-link {
         transition: transform 0.2s, color 0.2s;
         display: inline-block;
@@ -72,7 +83,7 @@
       }
  
       .social-link:hover {
-        transform: translateY(-3px); /* Pequeño brinco al pasar el mouse */
+        transform: translateY(-3px); 
       }
  
       /* Colores de marca */
