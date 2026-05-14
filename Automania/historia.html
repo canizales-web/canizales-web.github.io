@@ -8,13 +8,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
             :root { --main-red: #bd001f; }
-            body { background-color: #121212; color: #e0e0e0; padding-top: 80px; }
+            body { background-color: #212529; color: #e0e0e0; padding-top: 80px; }
+            
             .text-red { color: #bd001f; }
             .card { background-color: #1a1a1a; border-color: #333; color: #fff; }
             .card-header { background-color: #252525; border-bottom: 2px solid #bd001f; }
             .badge-automania { background-color: #bd001f; color: white; }
             .img-caption { font-size: 0.9rem; color: #888; text-align: center; margin-top: 8px; }
-            .article-img { border: 1px solid #333; transition: transform 0.3s; }
+            .article-img { border: 1px solid #444; transition: transform 0.3s; width: 100%; height: auto; }
             .article-img:hover { transform: scale(1.01); border-color: #bd001f; }
 
             .navbar .nav-link {
@@ -36,12 +37,9 @@
                 transition: transform 0.3s ease;
             }
             
-            .navbar .navbar-brand:hover {
-                transform: scale(1.05);
-            }
-            
             .navbar .nav-link.active {
                 color: #bd001f !important;
+                border-bottom: 2px solid #bd001f !important;
                 opacity: 1 !important;
             }
             
@@ -50,104 +48,105 @@
                 border-bottom: 2px solid #bd001f !important;
                 opacity: 1 !important;
             }
-            
-            .navbar .nav-link:not(.active) {
-                opacity: 0.7;
+
+            .dropdown-menu {
+                background-color: #1a1a1a;
+                border: 1px solid #333;
+            }
+            .dropdown-item {
+                color: #ffffff;
+                font-weight: 300;
+            }
+            .dropdown-item:hover {
+                background-color: #bd001f;
+                color: white;
+            }
+            .dropdown-divider {
+                border-top: 1px solid #333;
             }
         </style>
     </head>
     <body>
-       <header data-bs-theme="dark">   
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow">
-    <div class="container-fluid">
-      <a class="navbar-brand custom-brand" href="Index.html">Automanía</a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <header data-bs-theme="dark">   
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="Index.html">Automanía</a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="contenido.html">
-              <i class="fa-solid fa-car"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="historia.html">Historia del automóvil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tipos.html">Tipos de automóviles</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Marcas
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Historia</a></li>
-              <li><a class="dropdown-item" href="#">Mejores/Peores creaciones</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Ranking global de marcas</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">El futuro de la industria</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="contenido.html">
+                                    <i class="fa-solid fa-car"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="historia.html">Historia del automóvil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tipos.html">Tipos de automóviles</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Marcas
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://es.wikipedia.org/wiki/Historia_del_autom%C3%B3vil" target="_blank">Historia General</a></li>
+                                    <li><a class="dropdown-item" href="https://www.topgear.com/car-news/best-and-worst-cars" target="_blank">Mejores/Peores creaciones</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="https://www.interbrand.com/best-global-brands/" target="_blank">Ranking global de marcas</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">El futuro de la industria</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
         <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-8">
                     <article>
                         <header class="mb-4">
-                            <h1 class="fw-bolder mb-1 text-red">La Epopeya del Motor: De la Vapor a la Inteligencia Artificial</h1>
+                            <h1 class="fw-bolder mb-1 text-red">La Epopeya del Motor: De la Vapor a la IA</h1>
                             <div class="text-muted fst-italic mb-2">Escrito por el Equipo Editorial de Automanía</div>
                             <span class="badge badge-automania">Historia</span>
                             <span class="badge badge-automania">Ingeniería</span>
                         </header>
 
-                        <!-- Imagen Principal -->
                         <figure class="mb-4">
-                            <img class="img-fluid rounded article-img" src="https://images.unsplash.com/photo-1517524001193-f27306231940?q=80&w=900" alt="Auto clásico en museo" />
-                            <figcaption class="img-caption">El legado del diseño clásico: donde la forma encontraba su función.</figcaption>
+                            <img class="img-fluid rounded article-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1000" alt="Auto clásico en museo" />
+                            <figcaption class="img-caption">El legado del diseño clásico: donde la forma encontraba su función en cada curva.</figcaption>
                         </figure>
 
                         <section class="mb-5">
                             <p class="fs-5 mb-4">El nacimiento del automóvil no fue un evento único, sino una acumulación de ingenio. Aunque Karl Benz se lleva el crédito con su <strong>Patent-Motorwagen</strong> de 1886, el camino fue pavimentado por experimentos con vapor desde el siglo XVIII.</p>
                             
-                            <h2 class="fw-bolder mb-4 mt-5 text-red">La Revolución de Ford y la Producción en Masa</h2>
-                            <p class="fs-5 mb-4">Antes de 1908, poseer un vehículo era un lujo extremo. Henry Ford cambió las reglas del juego con el <strong>Model T</strong>. Al implementar la línea de ensamblaje móvil, Ford redujo el tiempo de producción de 12 horas a solo 93 minutos por vehículo.</p>
+                            <h2 class="fw-bolder mb-4 mt-5 text-red">La Revolución de Ford</h2>
+                            <p class="fs-5 mb-4">Henry Ford cambió las reglas del juego con el <strong>Model T</strong>. Al implementar la línea de ensamblaje móvil, Ford redujo el tiempo de producción drásticamente, haciendo que el auto fuera para todos, no solo para los ricos.</p>
                             
-                            <!-- Segunda Imagen -->
                             <div class="row my-4">
                                 <div class="col-md-6">
                                     <img class="img-fluid rounded article-img" src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=450" alt="Línea de producción antigua" />
                                 </div>
                                 <div class="col-md-6">
-                                    <img class="img-fluid rounded article-img" src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=450" alt="Motor clásico detallado" />
+                                    <img class="img-fluid rounded article-img" src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=450" alt="Motor clásico" />
                                 </div>
-                                <p class="img-caption">Izquierda: La eficiencia de las fábricas del siglo XX. Derecha: La belleza mecánica de los motores carburados.</p>
+                                <p class="img-caption">Eficiencia fabril y belleza mecánica en los motores de antaño.</p>
                             </div>
 
-                            <h2 class="fw-bolder mb-4 mt-5 text-red">La Era Dorada y la Crisis del Petróleo</h2>
-                            <p class="fs-5 mb-4">Tras la Segunda Guerra Mundial, el diseño automotriz explotó. Aparecieron los "Muscle Cars" americanos y los deportivos europeos refinados. Sin embargo, la crisis del petróleo de los años 70 obligó a la industria a mirar hacia la eficiencia, dando paso al desarrollo de la inyección electrónica y motores más compactos.</p>
-                            
-                            <!-- Tercera Imagen -->
-                            <figure class="mb-4 text-center">
-                                <img class="img-fluid rounded article-img" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=900" alt="Deportivo de lujo moderno" />
-                                <figcaption class="img-caption">La culminación de la combustión: potencia y aerodinámica extrema.</figcaption>
-                            </figure>
-
-                            <p class="fs-5 mb-4">Hoy, nos encontramos en la transición más grande desde la desaparición de los caballos: la electrificación total y la conducción autónoma.</p>
+                            <h2 class="fw-bolder mb-4 mt-5 text-red">La Era Dorada</h2>
+                            <p class="fs-5 mb-4">Tras la Segunda Guerra Mundial, el diseño explotó con los "Muscle Cars" americanos. Sin embargo, la crisis de los 70 obligó a crear motores más compactos y eficientes.</p>
                         </section>
                     </article>
                 </div>
 
-                <!-- Barra lateral -->
                 <div class="col-lg-4">
                     <div class="card mb-4 shadow">
                         <div class="card-header fw-bold">Hitos Clave</div>
@@ -156,7 +155,6 @@
                                 <li><strong class="text-red">1886:</strong> Primer auto de Benz.</li>
                                 <li><strong class="text-red">1908:</strong> Ford Model T.</li>
                                 <li><strong class="text-red">1950:</strong> Auge del diseño aeroespacial.</li>
-                                <li><strong class="text-red">1997:</strong> Lanzamiento del primer híbrido masivo.</li>
                                 <li><strong class="text-red">2020+:</strong> Dominio del vehículo eléctrico.</li>
                             </ul>
                         </div>
@@ -164,6 +162,7 @@
                 </div>
             </div>
         </div>
+
         <footer class="py-5 bg-dark mt-5 border-top border-danger">
             <div class="container"><p class="m-0 text-center text-white">&copy; Automanía 2026</p></div>
         </footer>
