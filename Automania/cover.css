@@ -23,7 +23,7 @@
 /* Base structure */
 body {
   /* Usamos la imagen de fondo que mencionaste, con un filtro oscuro para que resalte el texto */
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('images/backgroundred.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('backgroundred.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
