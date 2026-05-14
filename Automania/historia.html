@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>La historia del Motor - Automanía</title>
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
             :root { --main-red: #bd001f; }
             body { background-color: #121212; color: #e0e0e0; padding-top: 80px; }
@@ -15,6 +16,45 @@
             .img-caption { font-size: 0.9rem; color: #888; text-align: center; margin-top: 8px; }
             .article-img { border: 1px solid #333; transition: transform 0.3s; }
             .article-img:hover { transform: scale(1.01); border-color: #bd001f; }
+
+            .navbar .nav-link {
+                font-weight: 400 !important; 
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                border-bottom: 2px solid transparent; 
+                transition: all 0.2s ease-in-out;
+                padding-bottom: 5px; 
+            }
+            
+            .navbar .navbar-brand {
+                color: #bd001f !important;
+                font-weight: 800 !important; 
+                font-size: 1.4rem; 
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                border-bottom: none !important; 
+                transition: transform 0.3s ease;
+            }
+            
+            .navbar .navbar-brand:hover {
+                transform: scale(1.05);
+            }
+            
+            .navbar .nav-link.active {
+                color: #bd001f !important;
+                border-bottom: 2px solid #bd001f !important;
+                opacity: 1 !important;
+            }
+            
+            .navbar .nav-link:hover {
+                color: #ffffff !important;
+                border-bottom: 2px solid #bd001f !important;
+                opacity: 1 !important;
+            }
+            
+            .navbar .nav-link:not(.active) {
+                opacity: 0.7;
+            }
         </style>
     </head>
     <body>
