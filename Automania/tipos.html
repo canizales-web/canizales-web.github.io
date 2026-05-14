@@ -8,18 +8,32 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
             :root { --main-red: #bd001f; }
-            body { 
-                background-color: #121212; 
-                color: #e0e0e0; 
-                padding-top: 80px; 
-            }
+            body { background-color: #212529; color: #e0e0e0; padding-top: 80px; }
+            
             .text-red { color: #bd001f; }
             .card { background-color: #1a1a1a; border-color: #333; color: #fff; }
             .card-header { background-color: #252525; border-bottom: 2px solid #bd001f; }
             .badge-automania { background-color: #bd001f; color: white; padding: 0.5em 1em; }
-            .segment-card { border-left: 4px solid #bd001f; padding: 20px; background: #1a1a1a; margin-bottom: 30px; border-radius: 0 10px 10px 0; }
-            .article-img { width: 100%; border-radius: 8px; border: 1px solid #333; }
-            .img-caption { font-size: 0.85rem; color: #777; margin-top: 5px; text-align: center; }
+            
+            .segment-card { 
+                border-left: 4px solid #bd001f; 
+                padding: 25px; 
+                background: #1a1a1a; 
+                margin-bottom: 30px; 
+                border-radius: 0 10px 10px 0;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            }
+
+            .article-img { 
+                width: 100%; 
+                height: 350px; 
+                object-fit: cover; 
+                border-radius: 8px; 
+                border: 1px solid #444; 
+                transition: transform 0.3s;
+            }
+            .article-img:hover { transform: scale(1.01); border-color: #bd001f; }
+            .img-caption { font-size: 0.85rem; color: #777; margin-top: 10px; text-align: center; }
 
             .navbar .nav-link {
                 font-weight: 400 !important; 
@@ -29,79 +43,55 @@
                 transition: all 0.2s ease-in-out;
                 padding-bottom: 5px; 
             }
-            
             .navbar .navbar-brand {
                 color: #bd001f !important;
                 font-weight: 800 !important; 
                 font-size: 1.4rem; 
                 text-transform: uppercase;
                 letter-spacing: 1.5px;
-                border-bottom: none !important; 
-                transition: transform 0.3s ease;
             }
-            
-            .navbar .navbar-brand:hover {
-                transform: scale(1.05);
-            }
-            
             .navbar .nav-link.active {
                 color: #bd001f !important;
-                opacity: 1 !important;
-            }
-            
-            .navbar .nav-link:hover {
-                color: #ffffff !important;
                 border-bottom: 2px solid #bd001f !important;
                 opacity: 1 !important;
             }
-            
-            .navbar .nav-link:not(.active) {
-                opacity: 0.7;
+            .navbar .nav-link:hover {
+                color: #ffffff !important;
+                border-bottom: 2px solid #bd001f !important;
             }
+
+            .dropdown-menu { background-color: #1a1a1a; border: 1px solid #333; }
+            .dropdown-item { color: #ffffff; font-weight: 300; }
+            .dropdown-item:hover { background-color: #bd001f; color: white; }
         </style>
     </head>
     <body>
-       <header data-bs-theme="dark">   
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow">
-    <div class="container-fluid">
-      <a class="navbar-brand custom-brand" href="Index.html">Automanía</a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="contenido.html">
-              <i class="fa-solid fa-car"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="historia.html">Historia del automóvil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="tipos.html">Tipos de automóviles</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Marcas
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Historia</a></li>
-              <li><a class="dropdown-item" href="#">Mejores/Peores creaciones</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Ranking global de marcas</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">El futuro de la industria</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+        <header data-bs-theme="dark">   
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="Index.html">Automanía</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="contenido.html"><i class="fa-solid fa-car"></i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="historia.html">Historia del automóvil</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="tipos.html">Tipos de automóviles</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Marcas</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://es.wikipedia.org/wiki/Historia_del_autom%C3%B3vil" target="_blank">Historia General</a></li>
+                                    <li><a class="dropdown-item" href="https://www.topgear.com/car-news/best-and-worst-cars" target="_blank">Mejores/Peores</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="https://www.interbrand.com/best-global-brands/" target="_blank">Ranking Global</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
         <div class="container mt-5">
             <div class="row">
@@ -109,41 +99,33 @@
                     <article>
                         <header class="mb-4">
                             <h1 class="fw-bolder mb-1 text-red">Guía de Segmentos: De Sedanes a Superdeportivos</h1>
-                            <div class="text-muted fst-italic mb-2">Manual de Carrocerías por Automanía</div>
+                            <div class="text-muted fst-italic mb-2">Análisis de Carrocerías por Automanía</div>
                             <span class="badge badge-automania">Guía</span>
-                            <span class="badge badge-automania">Ingeniería</span>
+                            <span class="badge badge-automania">Diseño</span>
                         </header>
 
                         <section class="mb-5">
-                            <p class="fs-5 mb-5">Clasificar un automóvil correctamente es clave para entender su propósito. Aquí analizamos las configuraciones más importantes que definen el mercado actual[cite: 1].</p>
+                            <p class="fs-5 mb-5">En el mundo del motor, la carrocería no es solo estética, es la que dicta el comportamiento y la utilidad de un vehículo. En esta guía desglosamos los formatos que dominan las carreteras hoy en día.</p>
 
-                            <!-- Segmento Sedán -->
                             <div class="segment-card">
-                                <h3 class="text-red">1. Sedán</h3>
-                                <p>El equilibrio perfecto entre confort y aerodinámica. Su estructura de tres volúmenes separa motor, cabina y carga de forma óptima.</p>
-                                <img class="article-img mb-2" src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800" alt="Sedán moderno" />
+                                <h3 class="text-red">1. Sedán: Elegancia y Estabilidad</h3>
+                                <p>Es el formato clásico por excelencia. Se define por sus tres volúmenes claramente separados: el compartimento del motor, la cabina de pasajeros y el maletero independiente. Su centro de gravedad bajo lo hace ideal para viajes en carretera con un confort superior.</p>
+                                <img class="article-img" src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?q=80&w=1000" alt="Sedán moderno" />
+                                <p class="img-caption">El sedán sigue siendo la referencia en aerodinámica y refinamiento dinámico.</p>
                             </div>
 
-                            <!-- Segmento Hatchback Corregido -->
                             <div class="segment-card">
-                                <h3 class="text-red">2. Hatchback</h3>
-                                <p>La solución urbana definitiva. Su portón trasero permite un acceso total al área de carga integrada, ofreciendo versatilidad en dimensiones compactas[cite: 1].</p>
-                                <div class="row g-2">
-                                    <div class="col-6">
-                                        <img class="article-img" src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=400" alt="Hatchback frontal" />
-                                    </div>
-                                    <div class="col-6">
-                                        <img class="article-img" src="https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?auto=format&fit=crop&q=80&w=400" alt="Hatchback lateral" />
-                                    </div>
-                                </div>
-                                <p class="img-caption mt-2">Versatilidad urbana: la combinación ideal de espacio y agilidad para el día a día[cite: 1].</p>
+                                <h3 class="text-red">2. Hatchback: El Rey de la Ciudad</h3>
+                                <p>Compactos y sumamente ágiles. La característica principal es su portón trasero que incluye el cristal, integrando el área de carga con el habitáculo. Es la opción preferida para quienes buscan practicidad sin sacrificar el estilo en entornos urbanos.</p>
+                                <img class="article-img" src="https://images.unsplash.com/photo-1590362891991-f776e747a588?q=80&w=1000" alt="Hatchback moderno" />
+                                <p class="img-caption">Dimensiones reducidas que esconden una versatilidad sorprendente en el interior.</p>
                             </div>
 
-                            <!-- Segmento SUV -->
                             <div class="segment-card">
-                                <h3 class="text-red">3. SUV (Sport Utility Vehicle)</h3>
-                                <p>Dominadores del mercado por su posición de manejo elevada y capacidad fuera del asfalto. Ofrecen la robustez de un camión con el lujo de un sedán.</p>
-                                <img class="article-img mb-2" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800" alt="SUV de aventura" />
+                                <h3 class="text-red">3. SUV: Capacidad Sin Límites</h3>
+                                <p>Los Vehículos Utilitarios Deportivos han conquistado el mundo. Combinan la altura de un todoterreno con la tecnología de un auto de lujo. Su espacio interior y la sensación de seguridad que ofrece su posición de manejo elevada son sus mayores virtudes.</p>
+                                <img class="article-img" src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000" alt="SUV moderna" />
+                                <p class="img-caption">Robustez visual y capacidad para adaptarse a cualquier tipo de camino familiar.</p>
                             </div>
                         </section>
                     </article>
@@ -151,13 +133,13 @@
 
                 <div class="col-lg-4">
                     <div class="card mb-4 shadow">
-                        <div class="card-header fw-bold">¿Cómo elegir?</div>
+                        <div class="card-header fw-bold">¿Cuál te conviene?</div>
                         <div class="card-body">
-                            <p>Evalúa tus necesidades según el uso principal[cite: 1]:</p>
+                            <p>Elige según tu estilo de vida:</p>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent text-white border-secondary">Urbano -> Hatchback</li>
-                                <li class="list-group-item bg-transparent text-white border-secondary">Familiar -> SUV</li>
-                                <li class="list-group-item bg-transparent text-white border-secondary">Viajes -> Sedán</li>
+                                <li class="list-group-item bg-transparent text-white border-secondary"><i class="fa-solid fa-city text-red"></i> Ciudad -> Hatchback</li>
+                                <li class="list-group-item bg-transparent text-white border-secondary"><i class="fa-solid fa-users text-red"></i> Familia -> SUV</li>
+                                <li class="list-group-item bg-transparent text-white border-secondary"><i class="fa-solid fa-road text-red"></i> Negocios -> Sedán</li>
                             </ul>
                         </div>
                     </div>
