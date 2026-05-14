@@ -4,7 +4,7 @@
 
 .btn-light:focus {
   color: #fff;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none; 
   background-color: #bd001f;
   border: .05rem solid #bd001f;
   transition: all 0.3s ease;
@@ -16,9 +16,7 @@
   transform: translateY(-2px);
 }
 
-/* Base structure */
 body {
-  /* Usamos la imagen de fondo que mencionaste, con un filtro oscuro para que resalte el texto */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('backgroundred.jpg');
   background-size: cover;
   background-position: center;
@@ -32,7 +30,6 @@ body {
   max-width: 42em;
 }
 
-/* Header */
 .nav-masthead .nav-link {
   color: rgba(255, 255, 255, .5);
   border-bottom: .25rem solid transparent;
@@ -62,7 +59,6 @@ body {
     backdrop-filter: blur(5px);
 }
 
-/* Ajuste para inputs en la página de contacto */
 input, textarea {
     background-color: rgba(255, 255, 255, 0.1) !important;
     border: 1px solid rgba(189, 0, 31, 0.3) !important;
