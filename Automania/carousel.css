@@ -99,7 +99,6 @@ body {
   }
 }
  
-/*Personal Style*/
  
 .div-background{
   background-size: cover;
@@ -156,32 +155,36 @@ body {
 
 .twitter-tweet {
     margin: 0 auto !important;
-    padding: 10px !important; /* Espacio extra interno */
+    padding: 10px !important; 
 }
 
-.navbar-brand, .nav-link {
-    font-weight: 800 !important; 
+
+.navbar .navbar-brand, 
+.navbar .nav-link {
+    font-weight: 900 !important; 
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
 }
 
-.navbar-brand {
-    color: #bd001f !important; /* Rojo Automanía */
+.navbar .navbar-brand {
+    color: #bd001f !important; 
 }
 
-.nav-link.active {
+.navbar .nav-link.active {
     color: #bd001f !important;
-    text-shadow: 0 0 15px rgba(189, 0, 31, 0.5);
-    transform: scale(1.1); /* Ligeramente más grande */
-}
-
-.nav-link:hover {
-    color: #ffffff !important;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 15px rgba(189, 0, 31, 0.7); 
+    transform: scale(1.15); 
     opacity: 1 !important;
 }
 
-.nav-link:not(.active) {
-    opacity: 0.7;
+.navbar .nav-link:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    opacity: 1 !important;
+    transform: translateY(-2px); 
+}
+
+.navbar .nav-link:not(.active) {
+    opacity: 0.6;
 }
