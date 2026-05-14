@@ -158,3 +158,30 @@ body {
     margin: 0 auto !important;
     padding: 10px !important; /* Espacio extra interno */
 }
+
+.navbar-brand, .nav-link {
+    font-weight: 800 !important; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    color: #bd001f !important; /* Rojo Automanía */
+}
+
+.nav-link.active {
+    color: #bd001f !important;
+    text-shadow: 0 0 15px rgba(189, 0, 31, 0.5);
+    transform: scale(1.1); /* Ligeramente más grande */
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    opacity: 1 !important;
+}
+
+.nav-link:not(.active) {
+    opacity: 0.7;
+}
