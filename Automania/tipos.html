@@ -19,7 +19,45 @@
             .segment-card { border-left: 4px solid #bd001f; padding: 20px; background: #1a1a1a; margin-bottom: 30px; border-radius: 0 10px 10px 0; }
             .article-img { width: 100%; border-radius: 8px; border: 1px solid #333; }
             .img-caption { font-size: 0.85rem; color: #777; margin-top: 5px; text-align: center; }
-            .navbar-brand { font-weight: bold; }
+
+            .navbar .nav-link {
+                font-weight: 400 !important; 
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                border-bottom: 2px solid transparent; 
+                transition: all 0.2s ease-in-out;
+                padding-bottom: 5px; 
+            }
+            
+            .navbar .navbar-brand {
+                color: #bd001f !important;
+                font-weight: 800 !important; 
+                font-size: 1.4rem; 
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                border-bottom: none !important; 
+                transition: transform 0.3s ease;
+            }
+            
+            .navbar .navbar-brand:hover {
+                transform: scale(1.05);
+            }
+            
+            .navbar .nav-link.active {
+                color: #bd001f !important;
+                border-bottom: 2px solid #bd001f !important;
+                opacity: 1 !important;
+            }
+            
+            .navbar .nav-link:hover {
+                color: #ffffff !important;
+                border-bottom: 2px solid #bd001f !important;
+                opacity: 1 !important;
+            }
+            
+            .navbar .nav-link:not(.active) {
+                opacity: 0.7;
+            }
         </style>
     </head>
     <body>
